@@ -1,11 +1,11 @@
 # podman-compose-cookbook
 
-A podman version of [docker-compose-cookbook](https://github.com/aaronchenwei/docker-compose-cookbook)
+A Podman version of [docker-compose-cookbook](https://github.com/aaronchenwei/docker-compose-cookbook).
 
 ## Prerequisite
 
-- podman
-- podman compose
+- [Podman](https://podman.io/)
+- [Podman Compose](https://github.com/containers/podman-compose)
 
 For AlmaLinux 9, we can simply install them through
 
@@ -17,12 +17,14 @@ $ sudo dnf install podman podman-compose
 
 ```sh
 $ podman-compose up -d
+```
 
-# to migrate to kube
+### To Migrate to Kubernetes Pods
+
+```sh
 $ podman ps
 
 $ podman generate kube -f nexus.yaml b4fdcb0709e1
-# with Service 
+# with Kube Service 
 $ podman generate kube -s -f nexus.yaml b4fdcb0709e1
 ```
-
