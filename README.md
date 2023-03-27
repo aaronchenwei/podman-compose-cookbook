@@ -27,4 +27,7 @@ $ podman ps
 $ podman generate kube -f nexus.yaml b4fdcb0709e1
 # with Kube Service 
 $ podman generate kube -s -f nexus.yaml b4fdcb0709e1
+
+# play with kube
+$ podman play kube nexus.yml
 ```
