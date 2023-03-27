@@ -7,8 +7,9 @@ services:
   nexus:
     image: docker.io/sonatype/nexus3:${TAG:-latest}
     container_name: nexus
-    network_mode: bridge
     restart: unless-stopped
+    network_mode: bridge
+    hostname: nexus
     ports:
       - 8081:8081
     volumes:
